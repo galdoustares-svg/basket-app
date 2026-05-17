@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.farfetch.com)",
+      "WebFetch(domain:www.dexter.com.ar)",
+      "WebFetch(domain:es.pinterest.com)",
+      "WebSearch",
+      "WebFetch(domain:stockx.com)",
+      "Bash(npm install *)",
+      "Bash(node -e \"const fm = require\\('c:/Users/user Xe/Desktop/projects/basket-app/node_modules/framer-motion'\\); console.log\\(Object.keys\\(fm\\).filter\\(k => ['motion','AnimatePresence','useAnimation','useMotionValue'].includes\\(k\\)\\)\\)\")",
+      "Bash(curl -L \"https://i.pinimg.com/originals/7f/33/13/7f3313ebd56cbaa37f337ec6541edfb4.gif\" -o \"public/basketball-animation.gif\")",
+      "Bash(curl -L \"https://plus.unsplash.com/premium_photo-1671436822311-74685d571cd0?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YXJvJTIwZGUlMjBiYWxvbmNlc3RvfGVufDB8fDB8fHww\" -o \"public/basketball-hoop.jpg\")",
+      "Bash(curl -L \"https://i.pinimg.com/1200x/91/34/5d/91345dfe1ed279998b479aaa2b334d8b.jpg\" -o \"c:/Users/user Xe/Desktop/projects/basket-app/public/molten-bg4500.jpg\" --silent)",
+      "Bash(curl -L \"https://i.pinimg.com/736x/63/38/d7/6338d7679f5c929533bed3abea929dc8.jpg\" -o \"c:/Users/user Xe/Desktop/projects/basket-app/public/molten-bg-texture.jpg\" --silent)",
+      "Bash(curl -L \"https://i.pinimg.com/1200x/40/07/43/400743d4478222c8475f4bac825a8c71.jpg\" -o \"c:/Users/user Xe/Desktop/projects/basket-app/public/wilson-evolution-preview.jpg\" --silent)",
+      "Bash(node \"c:/Users/user Xe/Desktop/projects/basket-app/scripts/save-libero.js\")",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\user Xe\\\\Desktop\\\\projects\\\\basket-app\" -Recurse)",
+      "Bash(Select-Object FullName)",
+      "WebFetch(domain:www.pinterest.com)",
+      "Bash(npx next *)",
+      "Bash(npx tsc *)",
+      "Bash(node -e \"console.log\\(require\\('./node_modules/lucide-react/package.json'\\).version\\)\")"
+    ]
+  }
+}

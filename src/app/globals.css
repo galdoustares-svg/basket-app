@@ -1,0 +1,198 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000008;
+  --foreground: #e8e8ff;
+  --neon-blue: #3b82f6;
+  --neon-purple: #8b5cf6;
+  --neon-cyan: #06b6d4;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Cursor personalizado — solo activo en la sección de balones */
+body.balones-cursor,
+body.balones-cursor * {
+  cursor: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at top left, rgba(109, 40, 217, 0.28), transparent 40%),
+    radial-gradient(ellipse at bottom right, rgba(37, 99, 235, 0.25), transparent 40%),
+    radial-gradient(ellipse at center, rgba(88, 28, 235, 0.08), transparent 60%),
+    linear-gradient(160deg, #000008 0%, #08001a 45%, #000510 100%);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Neon glow on cards */
+.neon-card {
+  box-shadow:
+    0 0 0 1px rgba(139, 92, 246, 0.2),
+    0 0 20px rgba(139, 92, 246, 0.08),
+    0 8px 32px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.neon-card:hover {
+  box-shadow:
+    0 0 0 1px rgba(139, 92, 246, 0.5),
+    0 0 30px rgba(139, 92, 246, 0.25),
+    0 0 60px rgba(59, 130, 246, 0.1),
+    0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Neon text glow */
+.neon-heading {
+  text-shadow:
+    0 0 20px rgba(139, 92, 246, 0.6),
+    0 0 40px rgba(59, 130, 246, 0.3);
+}
+
+.neon-value {
+  text-shadow:
+    0 0 12px rgba(139, 92, 246, 0.9),
+    0 0 24px rgba(139, 92, 246, 0.5),
+    0 0 48px rgba(59, 130, 246, 0.3);
+}
+
+/* Neon border glow */
+.neon-border-glow {
+  box-shadow:
+    0 0 8px rgba(139, 92, 246, 0.6),
+    0 0 20px rgba(139, 92, 246, 0.3),
+    inset 0 0 8px rgba(139, 92, 246, 0.05);
+}
+
+/* Basketball shell decorative ring */
+.basketball-shell {
+  position: relative;
+}
+
+.basketball-shell::before {
+  content: "";
+  position: absolute;
+  inset: 4% auto auto 8%;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(139, 92, 246, 0.35);
+  opacity: 0.7;
+  filter: blur(1px) drop-shadow(0 0 12px rgba(139, 92, 246, 0.6));
+  animation: neon-pulse 4s ease-in-out infinite;
+}
+
+.basketball-shell::after {
+  content: "";
+  position: absolute;
+  inset: auto 6% 5% auto;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  opacity: 0.5;
+  filter: blur(1px) drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));
+  animation: neon-pulse 4s ease-in-out 2s infinite;
+}
+
+@keyframes neon-pulse {
+  0%, 100% { opacity: 0.5; filter: blur(1px) drop-shadow(0 0 8px rgba(139, 92, 246, 0.5)); }
+  50% { opacity: 0.9; filter: blur(0.5px) drop-shadow(0 0 20px rgba(139, 92, 246, 0.9)); }
+}
+
+/* Court lines in neon blue/purple */
+.court-lines {
+  background:
+    radial-gradient(circle at center, transparent 0 17%, rgba(139, 92, 246, 0.25) 17.5% 18.5%, transparent 19%),
+    linear-gradient(rgba(96, 165, 250, 0.12), rgba(96, 165, 250, 0.12)) center/2px 100% no-repeat,
+    linear-gradient(90deg, rgba(96, 165, 250, 0.12), rgba(96, 165, 250, 0.12)) center/100% 2px no-repeat;
+}
+
+/* Neon grid scanline overlay */
+.neon-grid {
+  background-image:
+    linear-gradient(rgba(139, 92, 246, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Neon button glow */
+.neon-btn {
+  box-shadow:
+    0 0 12px rgba(109, 40, 217, 0.7),
+    0 0 24px rgba(109, 40, 217, 0.35),
+    inset 0 0 12px rgba(139, 92, 246, 0.1);
+  transition: box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.neon-btn:hover {
+  box-shadow:
+    0 0 20px rgba(109, 40, 217, 1),
+    0 0 40px rgba(109, 40, 217, 0.6),
+    0 0 60px rgba(59, 130, 246, 0.2),
+    inset 0 0 16px rgba(139, 92, 246, 0.15);
+}
+
+/* Score neon glow */
+.score-neon {
+  text-shadow:
+    0 0 10px rgba(139, 92, 246, 1),
+    0 0 20px rgba(139, 92, 246, 0.8),
+    0 0 40px rgba(59, 130, 246, 0.5);
+}
+
+/* Ball floating animation */
+@keyframes float-ball {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-11px); }
+}
+
+.ball-float {
+  animation: float-ball 3.6s ease-in-out infinite;
+}
+
+/* Shoe levitation — suave y lento para páginas de detalle */
+@keyframes shoe-levitate {
+  0%, 100% { transform: translateY(0px); }
+  30%       { transform: translateY(-18px); }
+  60%       { transform: translateY(-10px); }
+  80%       { transform: translateY(-20px); }
+}
+
+.shoe-levitate {
+  animation: shoe-levitate 6s ease-in-out infinite;
+}
+
+.ball-img {
+  filter:
+    drop-shadow(0 14px 28px rgba(251,146,60,0.40))
+    drop-shadow(0 0 18px rgba(139,92,246,0.30));
+  transition: filter 0.35s ease, transform 0.35s ease;
+}
+
+.neon-card:hover .ball-img {
+  filter:
+    drop-shadow(0 18px 38px rgba(251,146,60,0.75))
+    drop-shadow(0 0 32px rgba(139,92,246,0.60))
+    drop-shadow(0 0 12px rgba(251,191,36,0.50));
+  transform: scale(1.12);
+}
