@@ -43,10 +43,10 @@ export default function Home() {
                 Aprende lo básico
               </a>
               <a
-                className="inline-flex items-center justify-center rounded-full border border-violet-500/30 bg-violet-600/10 px-6 py-3 text-sm font-bold uppercase tracking-[0.24em] text-violet-200 transition hover:border-violet-400/60 hover:bg-violet-600/20"
+                className="neon-btn inline-flex items-center justify-center rounded-full bg-violet-600 px-6 py-3 text-sm font-bold uppercase tracking-[0.24em] text-white transition hover:bg-violet-500"
                 href="#reglas"
               >
-                Descubre más
+                Reglas de oro
               </a>
             </div>
 
